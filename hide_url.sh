@@ -1,2 +1,0 @@
-sed -i 's/<a key={i} href={part} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 mt-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium text-sm transition-colors no-underline">/<button key={i} onClick={() => window.open(part, "_blank")} className="inline-flex items-center px-4 py-2 mt-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium text-sm transition-colors no-underline">/g' src/pages/Dashboard/OrderDetails.tsx
-sed -i 's/<\/a>/<\/button>/g' src/pages/Dashboard/OrderDetails.tsx

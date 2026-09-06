@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { useAuthStore } from '../../store/authStore';
 import { Link } from 'react-router-dom';
+import { DynamicIcon } from '../../components/DynamicIcon';
 import { Search, ChevronRight, Clock, Tag } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -112,7 +113,7 @@ export function WholesaleServices() {
               </div>
               
               <div className="p-5 flex-1 flex flex-col">
-                <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight flex items-start gap-2">{service.icon && <PackageSearch name={service.icon} className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />}<span>{service.name}</span></h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight flex items-start gap-2">{service.icon && <DynamicIcon name={service.icon} className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />}<span>{service.name}</span></h3>
                 <p className="text-sm text-slate-500 line-clamp-2 mb-4 flex-1">
                   {service.description}
                 </p>

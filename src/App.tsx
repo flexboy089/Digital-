@@ -49,6 +49,11 @@ import AdminReconciliation from './pages/admin/AdminReconciliation';
 import AdminSupportTickets from './pages/support/AdminSupportTickets';
 import AdminChat from './pages/admin/AdminChat';
 
+import GoogleServicesLayout from './pages/admin/GoogleServices';
+import GoogleGmail from './pages/admin/GoogleServices/Gmail';
+import GoogleDrive from './pages/admin/GoogleServices/Drive';
+import GoogleContacts from './pages/admin/GoogleServices/Contacts';
+
 import AdminAnnouncements from './pages/admin/AdminAnnouncements';
 import { Chat } from './pages/Dashboard/Chat';
 import AdminFooterSettings from './pages/admin/AdminFooterSettings';
@@ -106,6 +111,14 @@ export default function App() {
               <Route path="payments" element={<AdminPayments />} />
               <Route path="payment-methods" element={<AdminPaymentMethods />} />
               <Route path="reconciliation" element={<AdminReconciliation />} />
+              
+              <Route path="google" element={<GoogleServicesLayout />}>
+                 <Route index element={<Navigate to="gmail" replace />} />
+                 <Route path="gmail" element={<GoogleGmail />} />
+                 <Route path="drive" element={<GoogleDrive />} />
+                 <Route path="contacts" element={<GoogleContacts />} />
+              </Route>
+
               <Route path="announcements" element={<AdminAnnouncements />} />
               <Route path="notifications" element={<NotificationsPage />} />
               <Route path="support" element={<AdminSupportTickets />} />

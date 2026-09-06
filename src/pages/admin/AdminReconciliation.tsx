@@ -20,7 +20,7 @@ export default function AdminReconciliation() {
 
       if (error) throw error;
       
-      const paymentsData = events || [];
+      const paymentsData: any[] = events || [];
       
       // Fetch associated payments manually since foreign key might not be exposed to PostgREST
       if (paymentsData.length > 0) {

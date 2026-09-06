@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { Resend } from 'resend';
+import googleRoutes from './googleRoutes.js';
 
 async function startServer() {
   const app = express();
@@ -11,6 +12,7 @@ async function startServer() {
   app.use(express.json());
 
   // API Routes
+  app.use('/api/google', googleRoutes);
   
   // Endpoint to send emails securely
   app.post('/api/send-email', async (req, res) => {

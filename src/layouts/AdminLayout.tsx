@@ -17,6 +17,7 @@ const navItems = [
   { name: 'অ্যাডমিন ড্যাশবোর্ড', path: '/admin', icon: LayoutDashboard },
   { name: 'অ্যানালিটিক্স', path: '/admin/analytics', icon: FileBarChart },
   { name: 'ব্যবহারকারী', path: '/admin/users', icon: Users },
+  { name: 'Google Services', path: '/admin/google', icon: Briefcase },
   { name: 'হোলসেল আবেদন', path: '/admin/wholesale', icon: Briefcase },
   { name: 'সেবাসমূহ পরিচালনা', path: '/admin/services', icon: Package },
   { name: 'ক্যাটাগরি পরিচালনা', path: '/admin/categories', icon: Tags },

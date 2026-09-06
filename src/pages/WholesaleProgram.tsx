@@ -29,7 +29,7 @@ export function WholesaleProgram() {
         'postgres_changes',
         { event: '*', schema: 'public', table: 'site_settings', filter: "key=eq.wholesale_content" },
         (payload) => {
-          let val = payload.new.value;
+          let val = (payload.new as any).value;
           if (typeof val === 'string') {
             try { val = JSON.parse(val); } catch (e) {}
           }
